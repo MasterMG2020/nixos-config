@@ -16,22 +16,22 @@ let
             sed -i 's/0x00, 0x09, 0xBF, 0x12, 0x34, 0x56/0x00, 0x22, 0xAA, 0x06, 0x78, 0x57/g' desmume/src/wifi.cpp;
           '';
         }))
-        dolphin
-        genesis-plus-gx
+        #dolphin
+        #genesis-plus-gx
       ];
     });
 in
 {
   home.packages = (with pkgs; [
     # Games
-    pegasus-frontend
-    myRetroarch
-    libfaketime
-    airshipper
-    qjoypad
-    superTux
-    superTuxKart
-    gamepad-tool
+    #pegasus-frontend
+    #myRetroarch
+    # libfaketime
+    # airshipper
+    # qjoypad
+    # superTux
+    # superTuxKart
+    # gamepad-tool
   ]) ++ (with pkgs-stable; [
     pokefinder
   ]);

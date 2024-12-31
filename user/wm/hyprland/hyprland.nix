@@ -129,7 +129,6 @@ in
 
        bind=SUPER,S,exec,'' + userSettings.spawnBrowser + ''
 
-       bind=SUPERCTRL,S,exec,container-open # qutebrowser only
 
        bind=SUPERCTRL,P,pin
 
@@ -561,7 +560,7 @@ in
     nwggrid
     Alacritty
     neovide
-    qutebrowser
+    firefox
     brave-browser
     writer
     impress

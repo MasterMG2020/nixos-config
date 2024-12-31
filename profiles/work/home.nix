@@ -34,99 +34,99 @@
     # Core
     zsh
     alacritty
-    brave
-    qutebrowser
+    #brave
+    #qutebrowser
     git
-    syncthing
+    #syncthing
 
     # Office
-    nextcloud-client
-    libreoffice-fresh
-    mate.atril
-    openboard
-    xournalpp
+    #nextcloud-client
+    #libreoffice-fresh
+    #mate.atril
+    #openboard
+    #xournalpp
     gnome.adwaita-icon-theme
     shared-mime-info
     glib
-    newsflash
+    #newsflash
     foliate
     gnome.nautilus
     gnome.gnome-calendar
     gnome.seahorse
     gnome.gnome-maps
-    openvpn
+    #openvpn
     protonmail-bridge
-    texliveSmall
+    #texliveSmall
     numbat
     element-desktop-wayland
 
-    openai-whisper-cpp
+    #openai-whisper-cpp
 
-    wine
-    bottles
+    #wine
+    #bottles
     # The following requires 64-bit FL Studio (FL64) to be installed to a bottle
     # With a bottle name of "FL Studio"
-    (pkgs.writeShellScriptBin "flstudio" ''
-       #!/bin/sh
-       if [ -z "$1" ]
-         then
-           bottles-cli run -b "FL Studio" -p FL64
-           #flatpak run --command=bottles-cli com.usebottles.bottles run -b FL\ Studio -p FL64
-         else
-           filepath=$(winepath --windows "$1")
-           echo \'"$filepath"\'
-           bottles-cli run -b "FL Studio" -p "FL64" --args \'"$filepath"\'
-           #flatpak run --command=bottles-cli com.usebottles.bottles run -b FL\ Studio -p FL64 -args "$filepath"
-         fi
-    '')
-    (pkgs.makeDesktopItem {
-      name = "flstudio";
-      desktopName = "FL Studio 64";
-      exec = "flstudio %U";
-      terminal = false;
-      type = "Application";
-      icon = "flstudio";
-      mimeTypes = ["application/octet-stream"];
-    })
-    (stdenv.mkDerivation {
-      name = "flstudio-icon";
-      # icon from https://www.reddit.com/r/MacOS/comments/jtmp7z/i_made_icons_for_discord_spotify_and_fl_studio_in/
-      src = [ ../../user/pkgs/flstudio.png ];
+    # (pkgs.writeShellScriptBin "flstudio" ''
+    #    #!/bin/sh
+    #    if [ -z "$1" ]
+    #      then
+    #        bottles-cli run -b "FL Studio" -p FL64
+    #        #flatpak run --command=bottles-cli com.usebottles.bottles run -b FL\ Studio -p FL64
+    #      else
+    #        filepath=$(winepath --windows "$1")
+    #        echo \'"$filepath"\'
+    #        bottles-cli run -b "FL Studio" -p "FL64" --args \'"$filepath"\'
+    #        #flatpak run --command=bottles-cli com.usebottles.bottles run -b FL\ Studio -p FL64 -args "$filepath"
+    #      fi
+    # '')
+    # (pkgs.makeDesktopItem {
+    #   name = "flstudio";
+    #   desktopName = "FL Studio 64";
+    #   exec = "flstudio %U";
+    #   terminal = false;
+    #   type = "Application";
+    #   icon = "flstudio";
+    #   mimeTypes = ["application/octet-stream"];
+    # })
+    # (stdenv.mkDerivation {
+    #   name = "flstudio-icon";
+    #   # icon from https://www.reddit.com/r/MacOS/comments/jtmp7z/i_made_icons_for_discord_spotify_and_fl_studio_in/
+    #   src = [ ../../user/pkgs/flstudio.png ];
 
-      unpackPhase = ''
-        for srcFile in $src; do
-          # Copy file into build dir
-          cp $srcFile ./
-        done
-      '';
+    #   unpackPhase = ''
+    #     for srcFile in $src; do
+    #       # Copy file into build dir
+    #       cp $srcFile ./
+    #     done
+    #   '';
 
-      installPhase = ''
-        mkdir -p $out $out/share $out/share/pixmaps
-        ls $src
-        ls
-        cp $src $out/share/pixmaps/flstudio.png
-      '';
-    })
+    #   installPhase = ''
+    #     mkdir -p $out $out/share $out/share/pixmaps
+    #     ls $src
+    #     ls
+    #     cp $src $out/share/pixmaps/flstudio.png
+    #   '';
+    # })
 
     # Media
-    gimp
-    krita
+    #gimp
+    #krita
     pinta
-    inkscape
-    (pkgs-stable.lollypop.override { youtubeSupport = false; })
+    #inkscape
+    #(pkgs-stable.lollypop.override { youtubeSupport = false; })
     vlc
-    mpv
+    #mpv
     yt-dlp
-    blender-hip
-    libresprite
-    (pkgs.appimageTools.wrapType2 {
-      name = "Cura";
-      src = fetchurl {
-        url = "https://github.com/Ultimaker/Cura/releases/download/5.8.1/UltiMaker-Cura-5.8.1-linux-X64.AppImage";
-        hash = "sha256-VLd+V00LhRZYplZbKkEp4DXsqAhA9WLQhF933QAZRX0=";
-      };
-      extraPkgs = pkgs: with pkgs; [];
-     })
+    #blender-hip
+    #libresprite
+    # (pkgs.appimageTools.wrapType2 {
+    #   name = "Cura";
+    #   src = fetchurl {
+    #     url = "https://github.com/Ultimaker/Cura/releases/download/5.8.1/UltiMaker-Cura-5.8.1-linux-X64.AppImage";
+    #     hash = "sha256-VLd+V00LhRZYplZbKkEp4DXsqAhA9WLQhF933QAZRX0=";
+    #   };
+    #   extraPkgs = pkgs: with pkgs; [];
+    #  })
     #(pkgs-stable.cura.overrideAttrs (oldAttrs: {
     #  postInstall = oldAttrs.postInstall + ''cp -rf ${(pkgs.makeDesktopItem {
     #      name = "com.ultimaker.cura";
@@ -144,53 +144,30 @@
     #      })}/share/applications $out/share'';
     #}))
     #(pkgs.writeShellScriptBin "curax" ''env QT_QPA_PLATFORM=xcb ${pkgs-stable.cura}/bin/cura $@'')
-    (pkgs-stable.curaengine_stable)
-    openscad
-    (stdenv.mkDerivation {
-      name = "cura-slicer";
-      version = "0.0.7";
-      src = fetchFromGitHub {
-        owner = "Spiritdude";
-        repo = "Cura-CLI-Wrapper";
-        rev = "ff076db33cfefb770e1824461a6336288f9459c7";
-        sha256 = "sha256-BkvdlqUqoTYEJpCCT3Utq+ZBU7g45JZFJjGhFEXPXi4=";
-      };
-      phases = "installPhase";
-      installPhase = ''
-        mkdir -p $out $out/bin $out/share $out/share/cura-slicer
-        cp $src/cura-slicer $out/bin
-        cp $src/settings/fdmprinter.def.json $out/share/cura-slicer
-        cp $src/settings/base.ini $out/share/cura-slicer
-        sed -i 's+#!/usr/bin/perl+#! /usr/bin/env nix-shell\n#! nix-shell -i perl -p perl538 perl538Packages.JSON+g' $out/bin/cura-slicer
-        sed -i 's+/usr/share+/home/${userSettings.username}/.nix-profile/share+g' $out/bin/cura-slicer
-      '';
-      propagatedBuildInputs = with pkgs-stable; [
-        curaengine_stable
-      ];
-    })
+    #openscad
     obs-studio
-    ffmpeg
-    (pkgs.writeScriptBin "kdenlive-accel" ''
-      #!/bin/sh
-      DRI_PRIME=0 kdenlive "$1"
-    '')
-    movit
+    #ffmpeg
+    #(pkgs.writeScriptBin "kdenlive-accel" ''
+    #  #!/bin/sh
+    #  DRI_PRIME=0 kdenlive "$1"
+    #'')
+    #movit
     mediainfo
-    libmediainfo
-    audio-recorder
-    gnome.cheese
-    ardour
-    rosegarden
+    #libmediainfo
+    #audio-recorder
+    #gnome.cheese
+    #ardour
+    #rosegarden
     tenacity
 
     # Various dev packages
-    remmina
-    sshfs
-    texinfo
-    libffi zlib
-    nodePackages.ungit
-    ventoy
-    kdenlive
+    #remmina
+    #sshfs
+    #texinfo
+    #libffi zlib
+    #nodePackages.ungit
+    #ventoy
+    #kdenlive
   ]);
 
   home.file.".local/share/pixmaps/nixos-snowflake-stylix.svg".source =
@@ -226,12 +203,12 @@
       XDG_BOOK_DIR = "${config.home.homeDirectory}/Media/Books";
     };
   };
-  xdg.mime.enable = true;
-  xdg.mimeApps.enable = true;
-  xdg.mimeApps.associations.added = {
-    # TODO fix mime associations, most of them are totally broken :(
-    "application/octet-stream" = "flstudio.desktop;";
-  };
+  # xdg.mime.enable = true;
+  # xdg.mimeApps.enable = true;
+  # xdg.mimeApps.associations.added = {
+  #   # TODO fix mime associations, most of them are totally broken :(
+  #   "application/octet-stream" = "flstudio.desktop;";
+  # };
 
   home.sessionVariables = {
     EDITOR = userSettings.editor;

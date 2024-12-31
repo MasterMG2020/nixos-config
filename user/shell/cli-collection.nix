@@ -3,7 +3,9 @@
   # Collection of useful CLI apps
   home.packages = with pkgs; [
     # Command Line
-    disfetch lolcat cowsay
+    #disfetch 
+    neofetch
+    lolcat cowsay
     starfetch
     cava
     killall
