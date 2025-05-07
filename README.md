@@ -4,19 +4,19 @@
 
 Personal configuration for Hyprland on NixOS 25.05 :snowflake:
 
-![Screenshot](public/presentation.png)
-
 ---
 
 ## Table of Contents
 
-- [Setup](#setup)
-- [Installation](#installation)
-- [Keybindings](#keybindings)
-  - [Applications](#applications)
-  - [Windows](#windows)
-  - [Workspaces](#workspaces)
-- [Credits](#credits)
+- [Oughie's NixOS Configuration :cherry\_blossom:](#oughies-nixos-configuration-cherry_blossom)
+  - [Table of Contents](#table-of-contents)
+  - [Setup](#setup)
+  - [Installation](#installation)
+  - [Keybindings](#keybindings)
+    - [Applications](#applications)
+    - [Windows](#windows)
+    - [Workspaces](#workspaces)
+  - [Credits](#credits)
 
 ## Setup
 

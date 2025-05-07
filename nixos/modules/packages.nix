@@ -4,12 +4,12 @@
 
   environment.systemPackages = with pkgs; [
     # Applications
-    prismlauncher
+    #prismlauncher
     kitty
     discord
-    libreoffice
+    #libreoffice
     nautilus
-    eog
+    #eog
 
     # Desktop
     catppuccin-cursors.mochaFlamingo
@@ -24,8 +24,8 @@
     # Development
 
     # - Lua
-    stylua
-    lua-language-server
+    #stylua
+    #lua-language-server
 
     # - Nix
     nil
@@ -38,8 +38,8 @@
     ripgrep
 
     # - Miscellaneous
-    dhcpcd
-    ethtool
+    #dhcpcd
+    #ethtool
     home-manager
     libnotify
     libva

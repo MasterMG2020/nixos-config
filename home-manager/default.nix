@@ -4,8 +4,8 @@
   programs.home-manager.enable = true;
 
   home = {
-    username = "luma";
-    homeDirectory = "/home/luma";
+    username = "gaiggm";
+    homeDirectory = "/home/gaiggm";
     shell.enableZshIntegration = true;
 
     pointerCursor = {

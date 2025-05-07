@@ -18,13 +18,13 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
-      homeConfigurations."luma" = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations."gaiggm" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
         modules = [ ./home-manager ];
       };
 
-      nixosConfigurations.samoyed = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         modules = [ ./nixos ];
       };
     };

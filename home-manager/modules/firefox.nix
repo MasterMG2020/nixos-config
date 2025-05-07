@@ -2,7 +2,7 @@
   programs.firefox = {
     enable = true;
 
-    profiles.luma.settings."browser." = {
+    profiles.gaiggm.settings."browser." = {
       "tabs.closeWindowWithLastTab" = false;
       "fullscreen.autohide" = false;
       "translations.neverTranslateLanguages" = "de";

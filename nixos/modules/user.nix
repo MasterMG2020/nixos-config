@@ -11,7 +11,7 @@
     };
   };
 
-  users.users.luma = {
+  users.users.gaiggm = {
     isNormalUser = true;
     shell = pkgs.zsh;
 

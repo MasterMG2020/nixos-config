@@ -1,6 +1,6 @@
 {
   console.keyMap = "de-latin1-nodeadkeys";
-  time.timeZone = "Europe/Berlin";
+  time.timeZone = "Europe/Vienna";
 
   i18n =
     let

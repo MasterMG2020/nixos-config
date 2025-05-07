@@ -1,8 +1,8 @@
 {
   programs.git = {
     enable = true;
-    userName = "Oughie";
-    userEmail = "montgalletsabinpantin@gmail.com";
+    userName = "MasterMG2020";
+    userEmail = "markus.gaigg2020@gmail.com";
     extraConfig.init.defaultBranch = "main";
   };
 }

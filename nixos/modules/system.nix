@@ -6,15 +6,33 @@
   };
 
   hardware = {
-    cpu.amd.updateMicrocode = true;
+    #cpu.amd.updateMicrocode = true;
     graphics = {
       enable = true;
-      extraPackages = [ pkgs.amdvlk ];
+      #extraPackages = [ pkgs.amdvlk ];
+    };
+    nvidia = {
+      modesetting.enable = true;
+
+      powerManagement.enable = false;
+      powerManagement.finegrained = false;
+
+      open = false;
+      nvidiaSettings = true;
+
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+
+      prime = {
+        sync.enable = true;
+
+        intelBusId = "PCI:0:2:0";    # Adjust if needed (Intel iGPU)
+        nvidiaBusId = "PCI:1:0:0";   # Adjust if needed (NVIDIA dGPU)
+      }
     };
   };
 
   networking = {
-    hostName = "samoyed";
+    hostName = "nixos";
     networkmanager.enable = true;
     firewall.enable = true;
   };

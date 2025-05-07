@@ -10,16 +10,16 @@ return {
         null_ls.setup {
             sources = {
                 -- Lua
-                formatting.stylua.with {
-                    extra_args = {
-                        '--indent-type',
-                        'Spaces',
-                        '--call-parentheses',
-                        'None',
-                        '--quote-style',
-                        'AutoPreferSingle',
-                    },
-                },
+                -- formatting.stylua.with {
+                --     extra_args = {
+                --         '--indent-type',
+                --         'Spaces',
+                --         '--call-parentheses',
+                --         'None',
+                --         '--quote-style',
+                --         'AutoPreferSingle',
+                --     },
+                -- },
 
                 -- Nix
                 formatting.nixfmt,

@@ -34,7 +34,8 @@
     xserver = {
       enable = true;
       excludePackages = [ pkgs.xterm ];
-      videoDrivers = [ "amdgpu" ];
+      #videoDrivers = [ "amdgpu" ];
+      videoDrivers = [ "nvidia" ];
 
       xkb = {
         layout = "de";
