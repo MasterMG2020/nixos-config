@@ -1,0 +1,26 @@
+{ config, ... }: {
+  wayland.windowManager.hyprland.settings.monitor = [
+    "DP-1,1920x1080@165,1920x1080,auto"
+    "DP-2,1920x1080@165,0x1080,auto"
+    # Workspace assignments
+    "workspace=1,monitor:DP-1"
+    "workspace=2,monitor:DP-1"
+    "workspace=3,monitor:DP-1"
+    "workspace=4,monitor:DP-1"
+    "workspace=5,monitor:DP-1"
+    "workspace=6,monitor:DP-1"
+    "workspace=7,monitor:DP-1"
+    "workspace=8,monitor:DP-1"
+    "workspace=9,monitor:DP-1"
+    "workspace=10,monitor:DP-1"
+    "workspace=11,monitor:DP-2"
+    "workspace=12,monitor:DP-2"
+    "workspace=13,monitor:DP-2"
+    "workspace=14,monitor:DP-2"
+    "workspace=15,monitor:DP-2"
+    "workspace=17,monitor:DP-2"
+    "workspace=18,monitor:DP-2"
+    "workspace=19,monitor:DP-2"
+    "workspace=110,monitor:DP-2"
+  ];
+}

@@ -1,17 +1,14 @@
 {
   wayland.windowManager.hyprland.settings.decoration = {
-    rounding = 20;
-
+    rounding = 10;
     blur = {
       enabled = true;
-      passes = 3;
-      size = 10;
+      size = 3;
+      passes = 6;
     };
-
-    shadow = {
-      color = "rgba(1e1e2e8a)";
-      range = 20;
-      render_power = 3;
-    };
+    drop_shadow = false;
+    shadow_range = 4;
+    shadow_render_power = 3;
+    "col.shadow" = "rgba(1a1a1aee)";
   };
 }
