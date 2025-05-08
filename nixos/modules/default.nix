@@ -1,7 +1,7 @@
 {
   imports = [
     ./sddm
-    #./boot.nix for now commendted out, change later if i want to configure boot
+    ./boot.nix
     ./fonts.nix
     ./locale.nix
     ./nix.nix

@@ -20,17 +20,17 @@
       open = false;
       nvidiaSettings = true;
 
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      package = pkgs.linuxPackages.nvidiaPackages.stable;
 
       prime = {
         sync.enable = true;
 
         intelBusId = "PCI:0:2:0";    # Adjust if needed (Intel iGPU)
         nvidiaBusId = "PCI:1:0:0";   # Adjust if needed (NVIDIA dGPU)
-      }
+      };
     };
   };
-
+  
   networking = {
     hostName = "nixos";
     networkmanager.enable = true;
