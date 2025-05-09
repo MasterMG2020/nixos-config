@@ -13,7 +13,7 @@
       env = [
         # Existing ones...
         "QT_QPA_PLATFORMTHEME,qt6ct"
-        "WLR_DRM_NO_ATOMIC,1"
+        #"WLR_DRM_NO_ATOMIC,1"
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
         "XCURSOR_THEME,Bibata-Modern-Classic"

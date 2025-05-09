@@ -6,9 +6,10 @@
       size = 3;
       passes = 6;
     };
-    drop_shadow = false;
-    shadow_range = 4;
-    shadow_render_power = 3;
-    "col.shadow" = "rgba(1a1a1aee)";
+
+    enabled = false;
+    range = 4;
+    render_power = 3;
+    color = "rgba(1a1a1aee)";
   };
 }

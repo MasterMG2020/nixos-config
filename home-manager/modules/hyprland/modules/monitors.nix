@@ -1,10 +1,10 @@
 { config, ... }: {
   wayland.windowManager.hyprland.settings.monitor = [
     # External HDMI monitor (main display, left side)
-    "HDMI-A-1,1920x1080@60,0x0,1"
+    "HDMI-A-1,1920x1080@144,1920x0,1"
 
     # Internal laptop screen, placed to the right
-    "eDP-1,1920x1080@144,1920x0,1"
+    "eDP-1,1920x1080@144,0x0,1"
 
     # Workspace mapping
     "workspace=1,monitor:HDMI-A-1"

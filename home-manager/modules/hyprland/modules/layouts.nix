@@ -6,7 +6,7 @@
     };
     
     master = {
-      new_is_master = true;
+      new_status = "slave";
       mfact = 0.5;
     };
   };
