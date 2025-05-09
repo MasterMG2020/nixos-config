@@ -9,6 +9,11 @@
         "hyprpaper"
       ];
 
+      render = {
+        explicit_sync = 1;
+        explicit_sync_kms = 0;
+      };
+
       env = [
         # Existing ones...
         "QT_QPA_PLATFORMTHEME,qt6ct"
