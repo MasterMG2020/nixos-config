@@ -23,6 +23,5 @@
     "workspace=17,monitor:DP-1"
     "workspace=18,monitor:DP-1"
     "workspace=19,monitor:DP-1"
-    "workspace=110,monitor:DP-1"
   ];
 }
