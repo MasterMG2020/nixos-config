@@ -7,7 +7,6 @@
         "hyprctl setcursor HyprBibataModernClassicSVG 24"
         "gsettings set org.gnome.desktop.interface cursor-theme 'Bibata-Modern-Classic'"
         "hyprpaper"
-        "waybar"
       ];
 
       env = [
