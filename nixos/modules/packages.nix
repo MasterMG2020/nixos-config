@@ -13,5 +13,6 @@
     waybar
     fish
     firefox
+    git
   ];
 }

@@ -1,7 +1,7 @@
 { config, ... }: {
   programs.kitty = {
     enable = true;
-    
+
     settings = {
       background_opacity = "0.75";
       window_padding_width = "4";
@@ -11,10 +11,8 @@
       # Selection highlighting
       selection_foreground = "#ffffff";
       selection_background = "#14b8a6";
-    };
 
-    # Tokyo Night color scheme
-    colors = {
+      # Tokyo Night color scheme
       foreground = "#c0caf5";
       background = "#1a1b26";
 
@@ -41,7 +39,7 @@
   };
 
   # Ensure Nerd Font is available
-  home.packages = with config.nixpkgs; [
-    (nerdfonts.override { fonts = [ "FiraCode" ]; })
-  ];
+  #home.packages = with config.nixpkgs; [
+  #  (nerdfonts.override { fonts = [ "FiraCode" ]; })
+  #];
 }
