@@ -1,27 +1,31 @@
 { config, ... }: {
   wayland.windowManager.hyprland.settings.monitor = [
-    # Display configuration
-    "DP-1,1920x1080@144,0x0,auto"
-    "DP-2,1920x1080@144,1920x0,auto"
+    # External HDMI monitor (main display, left side)
+    "HDMI-A-1,1920x1080@60,0x0,1"
 
-    # Workspace assignments — DP-2 (right) is main
-    "workspace=1,monitor:DP-2"
-    "workspace=2,monitor:DP-2"
-    "workspace=3,monitor:DP-2"
-    "workspace=4,monitor:DP-2"
-    "workspace=5,monitor:DP-2"
-    "workspace=6,monitor:DP-2"
-    "workspace=7,monitor:DP-2"
-    "workspace=8,monitor:DP-2"
-    "workspace=9,monitor:DP-2"
-    "workspace=10,monitor:DP-2"
-    "workspace=11,monitor:DP-1"
-    "workspace=12,monitor:DP-1"
-    "workspace=13,monitor:DP-1"
-    "workspace=14,monitor:DP-1"
-    "workspace=15,monitor:DP-1"
-    "workspace=17,monitor:DP-1"
-    "workspace=18,monitor:DP-1"
-    "workspace=19,monitor:DP-1"
+    # Internal laptop screen, placed to the right
+    "eDP-1,1920x1080@144,1920x0,1"
+
+    # Workspace mapping
+    "workspace=1,monitor:HDMI-A-1"
+    "workspace=2,monitor:HDMI-A-1"
+    "workspace=3,monitor:HDMI-A-1"
+    "workspace=4,monitor:HDMI-A-1"
+    "workspace=5,monitor:HDMI-A-1"
+    "workspace=6,monitor:HDMI-A-1"
+    "workspace=7,monitor:HDMI-A-1"
+    "workspace=8,monitor:HDMI-A-1"
+    "workspace=9,monitor:HDMI-A-1"
+    "workspace=10,monitor:HDMI-A-1"
+    "workspace=11,monitor:eDP-1"
+    "workspace=12,monitor:eDP-1"
+    "workspace=13,monitor:eDP-1"
+    "workspace=14,monitor:eDP-1"
+    "workspace=15,monitor:eDP-1"
+    "workspace=16,monitor:eDP-1"
+    "workspace=17,monitor:eDP-1"
+    "workspace=18,monitor:eDP-1"
+    "workspace=19,monitor:eDP-1"
+    "workspace=20,monitor:eDP-1"
   ];
 }
