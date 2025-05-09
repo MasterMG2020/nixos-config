@@ -41,6 +41,18 @@
         layout = "de";
         variant = "nodeadkeys";
       };
+
+    power-profiles-daemon.enable = false; # has to be disabled to use tlp
+
+      tlp = {
+        enable = true;
+        settings = {
+          INTEL_GPU_MIN_FREQ_ON_AC = 350;
+          INTEL_GPU_MIN_FREQ_ON_BAT = 350;
+          INTEL_GPU_MAX_FREQ_ON_AC = 1450;
+          INTEL_GPU_MAX_FREQ_ON_BAT = 1450;
+        };
+      };
     };
   };
 }
